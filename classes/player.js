@@ -1,13 +1,12 @@
 module.exports = class Player{
-    constructor(name,id,room,turn,command, pos_name, pos_value){
+    constructor(name,id,room,turn,command){
         this.name = name
         this.cards = []
         this.id = id
         this.room = room
         this.turn = turn
         this.command = command
-        this.pos_name = pos_name
-        this.pos_value = pos_value
+        this.kadi = false
     }
     addCards(_cards){
       this.cards = this.cards.concat(_cards)
@@ -30,4 +29,8 @@ module.exports = class Player{
     setTurn(){
       this.turn = !this.turn
     }
+    setKadi(_state){
+      this.kadi = _state;
+    }
+
 }

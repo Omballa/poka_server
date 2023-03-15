@@ -6,10 +6,12 @@ var Card = require("./card.js")
 module.exports = class Deck {
     constructor(cards = freshDeck()){
         this.cards = cards
+        this.playedCards = []
     }
     get numberOfCards(){
         return this.cards.length
     }
+
     shuffle() {
         for(let i = this.numberOfCards - 1; i > 0; i--){
             const newIndex = Math.floor(Math.random() * (i + 1))
@@ -18,10 +20,12 @@ module.exports = class Deck {
             this.cards[i] = oldValue
         }
     }
+
     deal(amount){
         let cards = this.cards.splice(0, amount)
         return cards
     }
+
     pickTopCard(){
         let index = 0
         for(i=0; i<this.numberOfCards; i++){
@@ -41,9 +45,29 @@ module.exports = class Deck {
         return topCard
     }
 
+    resetDeck(){
+        this.cards = freshDeck()
+    }
+
     pickCard(){
         let pickedCard = this.cards.splice(0,1)
         return pickedCard
+    }
+
+    shufflePlayedCards(){
+        for(let i = this.playedCards.length - 1; i > 0; i--){
+            const newIndex = Math.floor(Math.random() * (i + 1))
+            const oldValue = this.playedCards[newIndex]
+            this.playedCards[newIndex] = this.playedCards[i]
+            this.playedCards[i] = oldValue
+
+            this.cards = this.playedCards
+            this.playedCards = []
+        }
+    }
+
+    setPlayedCards(_cards){
+        this.playedCards.concat(_cards)
     }
 
 }
