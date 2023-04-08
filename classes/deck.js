@@ -28,7 +28,7 @@ module.exports = class Deck {
 
     pickTopCard(){
         let index = 0
-        for(i=0; i<this.numberOfCards; i++){
+        for(let i=0; i<this.numberOfCards; i++){
             console.log(i)
             if(this.cards[i].value !== "K" 
                 && this.cards[i].value !== "Q"

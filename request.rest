@@ -1,0 +1,76 @@
+### Register
+POST http://localhost:3000/user/register HTTP/1.1
+content-type: application/json
+
+{
+    "name": "player01"
+}
+
+### Change name
+POST http://localhost:3000/user/update HTTP/1.1
+content-type: application/json
+
+{
+    "name":"Brandon",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMDk4N2ZkZWQtMWIxOC00ODY1LWJkMTYtZGZiNDM0YTU0ZmI5Iiwicm9sZSI6MywidmVyaWZpZWQiOmZhbHNlfSwiaWF0IjoxNjgwMTk5NTc5LCJleHAiOjE2ODIwMTM5Nzl9.dBnJOSY1s5Uq42ZIq600Tfm04iji721siQpbhDRWlJ8"
+}
+
+### Add game count
+POST http://localhost:3000/user/add-game/ HTTP/1.1
+content-type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMDk4N2ZkZWQtMWIxOC00ODY1LWJkMTYtZGZiNDM0YTU0ZmI5Iiwicm9sZSI6MywidmVyaWZpZWQiOmZhbHNlfSwiaWF0IjoxNjgwMTk5NTc5LCJleHAiOjE2ODIwMTM5Nzl9.dBnJOSY1s5Uq42ZIq600Tfm04iji721siQpbhDRWlJ8"
+}
+
+### Add games won count 
+POST http://localhost:3000/user/add-win/ HTTP/1.1
+content-type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMDk4N2ZkZWQtMWIxOC00ODY1LWJkMTYtZGZiNDM0YTU0ZmI5Iiwicm9sZSI6MywidmVyaWZpZWQiOmZhbHNlfSwiaWF0IjoxNjgwMTk5NTc5LCJleHAiOjE2ODIwMTM5Nzl9.dBnJOSY1s5Uq42ZIq600Tfm04iji721siQpbhDRWlJ8"
+}
+
+### Create room 
+POST http://localhost:3000/room/create/ HTTP/1.1
+content-type: application/json
+
+{
+    "name":"John",
+    "roomName":"Room004",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMDk4N2ZkZWQtMWIxOC00ODY1LWJkMTYtZGZiNDM0YTU0ZmI5Iiwicm9sZSI6MywidmVyaWZpZWQiOmZhbHNlfSwiaWF0IjoxNjgwMTk5NTc5LCJleHAiOjE2ODIwMTM5Nzl9.dBnJOSY1s5Uq42ZIq600Tfm04iji721siQpbhDRWlJ8"
+}
+
+### Pick card 
+POST http://localhost:3000/room/pick/ HTTP/1.1
+content-type: application/json
+
+{
+    "roomName":"Room004",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMDk4N2ZkZWQtMWIxOC00ODY1LWJkMTYtZGZiNDM0YTU0ZmI5Iiwicm9sZSI6MywidmVyaWZpZWQiOmZhbHNlfSwiaWF0IjoxNjgwMTk5NTc5LCJleHAiOjE2ODIwMTM5Nzl9.dBnJOSY1s5Uq42ZIq600Tfm04iji721siQpbhDRWlJ8"
+}
+
+### Play card 
+POST http://localhost:3000/room/play/ HTTP/1.1
+content-type: application/json
+
+{
+    "cards":[
+        {
+            "suit": "♠",
+      "value": "10",
+      "isSelected": false
+        }
+    ],
+    "roomName":"Room004",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMDk4N2ZkZWQtMWIxOC00ODY1LWJkMTYtZGZiNDM0YTU0ZmI5Iiwicm9sZSI6MywidmVyaWZpZWQiOmZhbHNlfSwiaWF0IjoxNjgwMTk5NTc5LCJleHAiOjE2ODIwMTM5Nzl9.dBnJOSY1s5Uq42ZIq600Tfm04iji721siQpbhDRWlJ8"
+}
+
+###
+
+GET http://localhost:3000/progress/levels/ HTTP/1.1
+content-type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiMDk4N2ZkZWQtMWIxOC00ODY1LWJkMTYtZGZiNDM0YTU0ZmI5Iiwicm9sZSI6MywidmVyaWZpZWQiOmZhbHNlfSwiaWF0IjoxNjgwMTk5NTc5LCJleHAiOjE2ODIwMTM5Nzl9.dBnJOSY1s5Uq42ZIq600Tfm04iji721siQpbhDRWlJ8"
+}

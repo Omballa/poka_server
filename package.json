@@ -6,7 +6,11 @@
   "dependencies": {
     "@socket.io/admin-ui": "^0.5.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "socket.io": "^4.5.4"
+    "jsonwebtoken": "^9.0.0",
+    "mysql": "^2.18.1",
+    "socket.io": "^4.5.4",
+    "uuid": "^9.0.0"
   }
 }

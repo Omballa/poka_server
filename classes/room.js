@@ -8,6 +8,7 @@ module.exports = class Room{
       this.requestedSuit = {isSet:false, suit:""}
       this.direction = 1
       this.prev_command
+      this.prev_player_id
     }
     setTopCard(card){
       this.topCard = card
@@ -16,6 +17,10 @@ module.exports = class Room{
 
     setPreviousCommand(command){
       this.prev_command = command
+    }
+
+    setPrevPlayerId(id){
+      this.prev_player_id = id
     }
 
     setRequestedSuit(_reqSuit){
